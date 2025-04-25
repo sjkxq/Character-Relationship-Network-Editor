@@ -19,5 +19,3 @@
 
 ## 依赖项
 - [relation-chart](https://github.com/xiedajian/relation-chart)：用于可视化人物关系网络。
-
-## 文件结构
