@@ -1,43 +1,108 @@
-/* 重置 body 样式，确保在所有浏览器中一致 */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
 
-/* 设置地图容器的样式，使其占据除头部外的整个视口高度 */
 #map {
     width: 100%;
-    height: calc(100vh - 160px);
+    height: calc(100vh);
     min-height: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: left 0.3s ease, width 0.3s ease;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-/* 设置按钮容器的样式，使其内容居中且具有间距 */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
+.sidebar.open ~ #map {
+    width: calc(100% - 300px);
+    left: 300px;
+}
+
+.sidebar:not(.open) ~ #map {
+    width: 100vw; /* 确保完全占据视口宽度 */
+    left: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
     background: #f5f5f5;
+    transition: left 0.3s ease;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1000;
+    overflow-y: auto;
 }
 
-/* 设置按钮的基本样式，包括背景色、文字颜色和对齐方式 */
-button {
+.sidebar-section {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.sidebar-section-header {
+    padding: 8px;
+    background: #e0e0e0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-section-header h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.sidebar-section-content {
+    padding: 8px;
+    background: #f9f9f9;
+    display: none;
+}
+
+.sidebar-section.open .sidebar-section-content {
+    display: block;
+}
+
+.night-mode .sidebar-section-header {
+    background: #333;
+    color: #e0e0e0;
+}
+
+.night-mode .sidebar-section-content {
+    background: #1e1e1e;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar-toggle {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
     padding: 8px 16px;
     background: #4CAF50;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    z-index: 1001;
 }
 
-/* 设置表单容器的基本样式，去除默认样式 */
 .form-container {
-    padding: 0;
-    border-bottom: none;
+    padding: 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
 }
 
-/* 设置表单输入框的基本样式，包括内边距和样式 */
 .form-container input {
     padding: 8px;
     margin-right: 10px;
@@ -45,21 +110,6 @@ button {
     border-radius: 4px;
 }
 
-/* 针对小屏幕设备，调整按钮容器的布局方式 */
-@media (max-width: 600px) {
-    .button-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* 调整按钮样式，使其在小屏幕上更好地适应 */
-    button {
-        width: 100%;
-        max-width: 200px;
-    }
-}
-
-/* 设置表单区域的样式，包括元素之间的间距和换行方式 */
 .form-section {
     display: flex;
     gap: 10px;
@@ -67,52 +117,32 @@ button {
     flex-wrap: wrap;
 }
 
-/* 针对中等屏幕设备，调整表单容器和表单区域的布局方式 */
-@media (max-width: 768px) {
-    .form-container {
-        flex-direction: column;
-    }
-
-    .form-section {
-        flex-direction: column;
-    }
-
-    /* 调整输入框和按钮的样式，使其在中等屏幕上更好地适应 */
-    .form-section input,
-    .form-section button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+/* 夜间模式样式 */
+body.night-mode {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-/* 设置搜索结果容器的最大高度和滚动方式 */
-#searchResults {
-    max-height: 200px;
-    overflow-y: auto;
+.night-mode .form-container {
+    background: #1e1e1e;
+    border-bottom-color: #333;
 }
 
-/* 设置可折叠元素的样式，包括背景色、文字颜色和鼠标指针样式 */
-.collapsible {
-    background-color: #f9f9f9;
-    color: #333;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
+.night-mode .sidebar {
+    background: #1e1e1e;
 }
 
-/* 设置可折叠元素激活或悬停时的样式 */
-.active, .collapsible:hover {
-    background-color: #f1f1f1;
+.night-mode button {
+    background: #333;
+    color: #e0e0e0;
 }
 
-/* 设置可折叠内容区域的样式，包括内边距和背景色 */
-.content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f9f9f9;
+.night-mode input {
+    background: #333;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.night-mode #searchResults {
+    color: #e0e0e0;
 }
