@@ -43,6 +43,13 @@ document.getElementById('selectAvatarBtn').addEventListener('click', function ()
     fileInput.click();
 });
 
+// 确保avatarInput元素存在
+const avatarInput = document.createElement('input');
+avatarInput.type = 'text';
+avatarInput.id = 'avatarInput';
+avatarInput.style.display = 'none';
+document.querySelector('.form-section').appendChild(avatarInput);
+
 document.getElementById('avatarFileInput').addEventListener('change', function (event) {
     const file = event.target.files[0];
     if (file) {
@@ -55,7 +62,8 @@ document.getElementById('addPersonBtn').addEventListener('click', function () {
     const name = document.getElementById('nameInput').value.trim();
     const roleId = parseInt(document.getElementById('roleIdInput').value.trim());
     const group = parseInt(document.getElementById('groupInput').value.trim());
-    const avatar = document.getElementById('avatarInput').value.trim();
+    const avatarInput = document.getElementById('avatarInput');
+    const avatar = avatarInput ? avatarInput.value.trim() : '';
 
     if (!name || isNaN(roleId) || isNaN(group) || !avatar) {
         alert('请填写所有字段！');

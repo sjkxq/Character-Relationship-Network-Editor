@@ -4,97 +4,82 @@
       "name": "\u5468\u83b9",
       "role_id": 41,
       "group": 1,
-      "avatar": "./img/140646844806.jpg"
+      "avatar": "./示例数据/1745247463373.jpg"
     },
     {
       "name": "\u6c88\u661f\u79fb",
       "role_id": 42,
-      "group": 1,
-      "avatar": "./img/140848800133.jpg"
+      "group": 1
     },
     {
       "name": "\u8d75\u767d\u77f3",
       "role_id": 44,
-      "group": 1,
-      "avatar": "./img/141152124754.jpg"
+      "group": 1
     },
     {
       "name": "\u5468\u8001\u56db",
       "role_id": 49,
-      "group": 1,
-      "avatar": "./img/143059527666.jpg"
+      "group": 1
     },
     {
       "name": "\u5434\u8058",
       "role_id": 43,
-      "group": 1,
-      "avatar": "./img/141041905393.jpg"
+      "group": 1
     },
     {
       "name": "\u6c88\u56db\u6d77",
       "role_id": 50,
-      "group": 1,
-      "avatar": "./img/143624653261.jpg"
+      "group": 1
     },
     {
       "name": "\u5434\u851a\u6587",
       "role_id": 47,
-      "group": 1,
-      "avatar": "./img/143212760960.jpg"
+      "group": 1
     },
     {
       "name": "\u5343\u7ea2",
       "role_id": 51,
-      "group": 1,
-      "avatar": "./img/144328263786.jpg"
+      "group": 1
     },
     {
       "name": "\u5434\u6f2a",
       "role_id": 48,
-      "group": 1,
-      "avatar": "./img/142808729350.jpg"
+      "group": 1
     },
     {
       "name": "\u6c88\u6708\u751f",
       "role_id": 55,
-      "group": 1,
-      "avatar": "./img/165524797798.jpg"
+      "group": 1
     },
     {
       "name": "\u6c88\u8001\u592b\u4eba",
       "role_id": 833,
-      "group": 1,
-      "avatar": "./img/f933743cc2563895cb28a4ba.png"
+      "group": 1
     },
     {
       "name": "\u6c88\u592b\u4eba",
       "role_id": 832,
-      "group": 1,
-      "avatar": "./img/dda11486be4f1b94717ea8bb.png"
+      "group": 1
     },
     {
       "name": "\u5434\u9047",
       "role_id": 59,
-      "group": 1,
-      "avatar": "./img/171456600879.jpg"
+      "group": 1
     },
     {
       "name": "\u80e1\u548f\u6885",
       "role_id": 45,
-      "group": 1,
-      "avatar": "./img/141341851866.jpg"
+      "group": 1
     },
     {
       "name": "\u675c\u660e\u793c",
       "role_id": 46,
-      "group": 1,
-      "avatar": "./img/141611471224.jpg"
+      "group": 1
     },
     {
       "name": "\u5434\u6cfd",
       "role_id": 56,
-      "group": 1,
-      "avatar": "./img/165926893902.jpg"
+      "group": 1
     }
   ],
   "links": [

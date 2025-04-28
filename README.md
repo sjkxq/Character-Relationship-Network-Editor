@@ -34,9 +34,6 @@
 6. **侧边栏**：
    - 点击侧边栏顶部的“☰”按钮，展开或收起侧边栏。
 
-## 依赖项
-- [relation-chart](https://github.com/xiedajian/relation-chart)：用于可视化人物关系网络。
-
 ## 技术栈
 
 - HTML
@@ -51,3 +48,7 @@
 ## 贡献
 
 欢迎提交 Issue 和 Pull Request 来改进本项目。
+
+## 致谢
+- [relation-chart](https://github.com/xiedajian/relation-chart)：用于可视化人物关系网络。
+示例数据来源于其Demo1内容
