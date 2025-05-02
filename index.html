@@ -17,7 +17,11 @@
                 <span>▼</span>
             </div>
             <div class="sidebar-section-content">
-                <button id="nightModeToggle">夜间模式</button>
+                <select id="themeSelector">
+    <option value="system">跟随系统</option>
+    <option value="light">日间模式</option>
+    <option value="dark">夜间模式</option>
+</select>
             </div>
         </div>
 
@@ -63,6 +67,8 @@
                 </div>
                 <div class="form-section">
                     <button id="addPersonBtn">添加人物</button>
+                    <button id="editPersonBtn">修改人物</button>
+                    <button id="deletePersonBtn">删除人物</button>
                 </div>
             </div>
         </div>
@@ -86,6 +92,8 @@
                 </div>
                 <div class="form-section">
                     <button id="addRelationBtn">添加关系</button>
+                    <button id="deleteRelationBtn">删除关系</button>
+                    <button id="editRelationBtn">修改关系</button>
                 </div>
             </div>
         </div>
@@ -97,6 +105,7 @@
 
     <script src="dist.js"></script>
     <script src="main.js"></script>
+    <script src="test.js"></script>
 </body>
 
 </html>
